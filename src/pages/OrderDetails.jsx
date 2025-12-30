@@ -976,34 +976,10 @@ const OrderDetails = ({ sellerId = null, orderPath = null }) => {
             <h1 className="text-4xl font-extrabold text-white mb-2 tracking-tight">Order Management Dashboard 📦</h1>
             <p className="text-gray-400 text-lg">Track, search, and manage customer orders with real-time updates.</p>
           </div>
-          <button 
-            onClick={() => setDebugMode(!debugMode)}
-            className="text-sm text-gray-400 hover:text-yellow-400 bg-gray-800 px-3 py-1 rounded-lg border border-gray-700"
-          >
-            {debugMode ? 'Hide Debug' : 'Debug Mode'}
-          </button>
         </div>
       </div>
 
-      {debugMode && (
-        <div className="mb-4 p-4 bg-gray-800 rounded-lg border border-yellow-700">
-          <div className="flex items-center text-yellow-400 mb-2">
-            <AlertCircle className="w-5 h-5 mr-2" />
-            <h3 className="font-semibold">Debug Information</h3>
-          </div>
-          <div className="text-sm text-gray-300 space-y-1">
-            <p>Seller UID: {sellerUid || 'Not signed in'}</p>
-            <p>Total Orders Found: {orders.length}</p>
-            <p>Filtered Orders: {filteredOrders.length}</p>
-            <button 
-              onClick={() => console.log('All orders:', orders)}
-              className="text-blue-400 hover:text-blue-300 text-xs"
-            >
-              Log orders to console
-            </button>
-          </div>
-        </div>
-      )}
+  
 
       {message && (
         <div className={`mb-6 p-4 rounded-xl ${message.includes('Error') ? 'bg-red-900/50 text-red-300 border border-red-700' : 'bg-green-900/50 text-green-300 border border-green-700'}`}>
