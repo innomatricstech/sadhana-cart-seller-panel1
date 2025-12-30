@@ -1041,11 +1041,6 @@ const OrderDetails = ({ sellerId = null, orderPath = null }) => {
                     </select>
                   </div>
                 </div>
-
-                <button className="flex items-center text-blue-400 bg-blue-600/10 border border-blue-600 px-4 py-2 rounded-lg">
-                  <Download className="w-4 h-4 mr-2" />
-                  Export Data
-                </button>
               </div>
             </div>
 
